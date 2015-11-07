@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>HTML - формы</title>
+</head>
+
+<body>
+<h1>Стилизуем HTML формы с помощью CSS</h1>
+<h2>Почтовая рассылка</h2>
+<form class="spam-form" method="post">
+    <div class="form-row">
+        <label for="fio">ФИО</label>
+        <input id="fio" type="text" placeholder="Иван Иван Иванович" name="spam[fio]">
+    </div>
+    <div class="form-row">
+        <label>
+            Мужской <input type="radio" name="spam[sex]" value="0">
+        </label>
+        <label>
+            Женский <input type="radio" name="spam[sex]" value="1">
+        </label>
+        <label>
+            Не определился <input type="radio" name="spam[sex]" value="2" checked>
+        </label>
+    </div>
+    <div class="form-row">
+        <label for="city">Выберите город</label>
+        <select name="spam[city]" id="city">
+            <option value="1">Санкт-Петербург</option>
+            <option value="2">Москва</option>
+            <option value="3" selected>Таганрог</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <fieldset>
+            <legend>Выберите категории рассылок</legend>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="spam[sections][]" value="1">
+                        Новости
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="spam[sections][]" value="2" checked>
+                        Котики
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="spam[sections][]" value="3">
+                        Автомобили
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+    <div class="form-row">
+        <label for="comment">Особые пожелания</label>
+        <textarea name="spam[comment]" id="comment"></textarea>
+    </div>
+    <div class="form-row buttons-panel">
+        <input type="submit" value="Send">
+    </div>
+</form>
+</body>
+</html>
